@@ -7,6 +7,6 @@ class Circle:
 
    
 circle1 = Circle(5)        
-print (f'The area of the circle is {circle1.get_area()}')
+print (f'The area of the circle is  {circle1.get_area()}')
 
 
