@@ -1,5 +1,5 @@
 import pytest
-from ut_ejercicio_sort_alg_01 import bubble_sort
+from semana_16.ut_ejercicio_sort_alg_01_ import bubble_sort
 
 def test_bubble_sort_order_a_small_list_correctly():
 

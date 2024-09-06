@@ -1,4 +1,4 @@
-from ut_ejercicio_func_5_02 import count_uppercase_and_lowercase
+from semana_16.ut_ejercicio_func_5_02_ import count_uppercase_and_lowercase
 
 def test_count_uppercase_and_lowercase_with_empty_string_returns_0_counts():
 
