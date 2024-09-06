@@ -9,10 +9,11 @@ def count_uppercase_and_lowercase(sentence):
                 if letter.islower():
                     lower += 1
                     
-                else:
+                if letter.isupper():
                     upper += 1
+
     
-    print (f'There’s {upper} upper cases and {lower} lower cases')
+    return (f'There’s {upper} upper cases and {lower} lower cases')
 
 
-count_uppercase_and_lowercase("Python 3.8!")
+print(count_uppercase_and_lowercase("Python 3.8!"))
