@@ -6,5 +6,5 @@ def invert_string(my_string):
         new_string +=letter
     return new_string
 
-word= invert_string("Hello world")
+word= invert_string("Hello, world!")
 print (word)

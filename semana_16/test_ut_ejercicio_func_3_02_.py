@@ -1,3 +1,4 @@
+
 from ut_ejercicio_func_3_02_ import sum_of_numbers
 
 def test_sum_of_numbers_with_empty_list_returns_0():

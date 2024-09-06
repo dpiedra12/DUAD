@@ -15,4 +15,4 @@ def count_uppercase_and_lowercase(sentence):
     print (f'There’s {upper} upper cases and {lower} lower cases')
 
 
-count_uppercase_and_lowercase("I love Nación Sushi")
+count_uppercase_and_lowercase("Python 3.8!")
