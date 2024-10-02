@@ -13,13 +13,13 @@ def show_main_window():
     ]
     
     window = sg.Window("Personal Financial Management", layout)
-    
-    while True:
+    main_win = True
+    while main_win:
         sg.user_settings_set_entry('my_table', pfm.table_data)
         event, values = window.read()
         
         if event == sg.WIN_CLOSED or event == "Exit":
-            break
+            main_win = False
         elif event == "Add category":
             show_category_window(pfm)
         elif event == "Add expense":

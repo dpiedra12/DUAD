@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
 
 def show_category_window(pfm):
+    category_win = True
     layout = [
         [sg.Text(pfm.headings[1])],
         [sg.Input(key=pfm.headings[1])],
@@ -9,10 +10,10 @@ def show_category_window(pfm):
     window = sg.Window("PFM - Category", layout)
     my_categories = sg.user_settings_get_entry('category_list', [])
 
-    while True:
+    while category_win:
         event, values = window.read()
         if event == sg.WIN_CLOSED:
-            break
+            category_win = False
         elif event == "Add":
             new_category = values[pfm.headings[1]]
             if new_category not in my_categories:
@@ -27,13 +28,14 @@ def show_category_window(pfm):
 
 
 def show_expense_window(pfm, input_category):
+    expense_win = True
     if not pfm.validate_category(input_category):
         return None
 
     layout = [
         [sg.Text(pfm.headings[0])],
         [sg.Input(key=pfm.headings[0])],
-        [sg.Text(pfm.headings[1])],
+        [sg.Text(pfm.headings[1]) ],
         [sg.Input(key=pfm.headings[1])],
         [sg.Text(pfm.headings[3])],
         [sg.Input(key=pfm.headings[3])],
@@ -41,27 +43,32 @@ def show_expense_window(pfm, input_category):
     ]
 
     window = sg.Window("PFM - Expense", layout)
+    
 
-    while True:
+    while expense_win:
         event, values = window.read()
         if event == sg.WIN_CLOSED:
-            break
+            expense_win = False
         elif event == "Add":
+            
             existing_category = sg.user_settings_get_entry('category_list', None)
             new_category = values[pfm.headings[1]]
             if new_category not in existing_category:
-                sg.popup("The entered category does not exist. Please register the category first.")
-                window.close()
-                return None
+                
+                sg.popup("The entered category does not exist. Please enter a registered  category.")
+                
+                continue
             else:
+                window.close()
                 sg.popup("The data has been entered correctly")
-            new_entry = [values[pfm.headings[0]], values[pfm.headings[1]], "Out", values[pfm.headings[3]]]
+                new_entry = [values[pfm.headings[0]], values[pfm.headings[1]], "Out", values[pfm.headings[3]]]
             
-            window.close()
+           
             return new_entry
 
 
 def show_income_window(pfm, input_category):
+    income_win = True
     if not pfm.validate_category(input_category):
         return None
 
@@ -77,20 +84,21 @@ def show_income_window(pfm, input_category):
 
     window = sg.Window("PFM - Income", layout)
 
-    while True:
+    while income_win:
         event, values = window.read()
         if event == sg.WIN_CLOSED:
-            break
+            income_win = False
         elif event == "Add":
             existing_category = sg.user_settings_get_entry('category_list', None)
             new_category = values[pfm.headings[1]]
             if new_category not in existing_category:
-                sg.popup("The entered category does not exist. Please register the category first.")
-                window.close()
-                return None
+                sg.popup("The entered category does not exist. Please enter a registered  category.")
+                
+                continue
             else:
+                window.close()
                 sg.popup("The data has been entered correctly")
-            new_entry = [values[pfm.headings[0]], values[pfm.headings[1]], "In", values[pfm.headings[3]]]
+                new_entry = [values[pfm.headings[0]], values[pfm.headings[1]], "In", values[pfm.headings[3]]]
             
-            window.close()
+            
             return new_entry
