@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form action="https://www.dummyjson.com/test" method="POST">
+      <h1>Información del votante</h1>
+      <label for="nombre">Nombre completo</label> <br />
+      <input type="text" id="nombre" name="nombre" /><br />
+
+      <label for="correo">Correo</label><br />
+      <input type="text" id="correo" name="correo" /><br />
+
+      <label for="indetificacion">Num. de Identificación</label><br />
+      <input type="text" id="indetificacion" name="indetificacion" /><br />
+
+      <label for="telefono">Teléfono</label><br />
+      <input type="text" id="telefono" name="telefono" /><br /><br />
+
+      <label for="opciones">Seleccione un candidato</label> <br />
+      <select id="opciones" name="opciones">
+        <option hidden>Seleccione un candidato</option>
+        <option value="candidato1">Candidato #1</option>
+        <option value="candidato2">Candidato #2</option>
+        <option value="candidato3">Candidato #3</option>
+      </select>
+      <br /><br />
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
