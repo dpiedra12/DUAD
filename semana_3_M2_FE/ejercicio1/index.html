@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link href="styles.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="custom-form">
+      <form action="https://dummyjson.com/test" method="POST">
+        <img id="img_line" src="line.png" alt="" />
+        <h1>Contact us!</h1>
+        <br />
+        <p>Got something to say? Fire away!</p>
+        <br />
+        <br />
+        <input
+          type="text"
+          id="first_name"
+          name="firstName"
+          placeholder="First name *"
+        />
+        <br />
+
+        <br />
+        <input
+          type="text"
+          id="last_name"
+          name="lastName"
+          placeholder="Last name *"
+        />
+        <br />
+
+        <br />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Email address *"
+        />
+        <br />
+
+        <label for="type"></label>
+        <br />
+        <select name="type" id="type">
+          <option hidden>What's your message about?</option>
+          <option value="question">Question</option>
+          <option value="suggestion">Suggestion</option>
+        </select>
+        <br />
+
+        <br />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Fire away! *"
+        ></textarea>
+        <br />
+        <br />
+        <input id="submit" type="submit" value="Send my message" />
+
+        <img id="img_poweredby" src="poweredby.png" alt="" />
+      </form>
+    </div>
+  </body>
+</html>
