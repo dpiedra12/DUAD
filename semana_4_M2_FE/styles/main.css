@@ -1,0 +1,260 @@
+/*main.css*/
+
+/*  CSS Reset*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 1px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1.8rem;
+
+   
+    
+}
+
+main{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 6px 16px 6px 16px;
+    background-color: #f8f9fa !important;
+   
+   
+   
+}
+
+.nav-button{
+    cursor: pointer;
+    
+}
+
+.search{
+    margin-left: auto;
+    text-align:left;
+    width: 14rem;
+    border-radius: 0.5rem;
+    border: 0.4px solid rgb(177, 175, 175);
+    
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: gray;
+    font-size: 0.875rem;
+    padding-left: 10px;
+    padding-top: 0.2rem;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    width: 6rem;
+    height: 3rem;
+    padding-top: 0.1rem;
+
+}
+.nav-logo{
+    margin-right: 2rem;
+    width: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#home-link{
+    color: rgb(6, 6, 6);
+    text-decoration: none;
+    
+}
+
+#home-link:focus{
+
+    color: gray;
+}
+
+#contact-link{
+    margin: 15px;
+    text-decoration: none;
+    color: gray;
+
+}
+
+.banner{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+   
+    background: #FEEAE9;
+    border-radius: 0.8rem;
+    
+
+}
+.banner-info{
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    text-align: center;
+    line-height: 1.5;
+
+    h2{
+
+        font-size: 2.5rem;
+        text-transform: capitalize;
+    }
+    
+    p{
+        font-size: 1.1rem;
+        padding-right: 10px;
+    }
+    
+}
+
+
+
+.banner-img{
+    
+    max-width: 35%;
+    min-width: 10%;
+       
+
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    justify-content: center;
+    gap:6%;
+
+}
+
+.card{
+    
+    min-width: 100px; 
+    max-width: 300px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.26);
+    text-align: center;
+
+    h3 {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    h4{
+        font-weight: 500;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    p{
+        line-height: 1.5;
+    }
+
+    button{
+        cursor: pointer;
+        background-color: black;
+        color: #ffffff;
+        font-size: 1.1rem;
+        padding: 8px 7px;
+        width: 50%;
+        margin: auto;
+        border-radius: 10px;
+        border: none;
+    }
+
+    
+}
+
+.card-img{
+    margin: auto;
+    width: 100%;
+    height: 85%;
+}
+
+
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    
+    background-color: #FEEAE9;
+    align-items: center;
+    border-radius: 0.8rem;
+    gap: 1rem;
+
+
+}
+
+input, select, textarea{
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    min-height: 40px;
+    height: 40px;
+    border: none;
+    color: gray;
+    font-size: 0.875rem;
+    
+    border-radius: 0.5rem;
+  }
+  
+  textarea{
+
+    resize: vertical;
+  }
+  h2{
+    text-transform:uppercase;
+    font-size: 2rem;
+  }
+
+  #submit{
+    cursor: pointer;
+    background-image: linear-gradient(rgb(255, 88, 155) 0%, rgb(255, 19, 111) 100%);
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 10px 30px 10px 30px;
+    width: auto
+   
+  }
+
+  .info-rights{
+    text-align: center;
+    color: gray;
+    padding-top: 35px;
+  }
