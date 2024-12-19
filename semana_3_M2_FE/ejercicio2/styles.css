@@ -1,0 +1,164 @@
+/*  CSS Reset*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, arial, sans-serif;
+}
+
+.content {
+
+  text-align: justify;
+  width: 800px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+h1{
+  font-family: 'Times New Roman',Helvetica, arial, sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #2D2E2E;
+  padding-bottom: 30px;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h2{
+  font-size: 1.4rem;
+  color: #403F3E;
+  font-weight: 300;
+  padding-bottom: 30px;
+  text-align: center;
+
+}
+
+p{
+  color: #403F3E;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+
+.by_harry{
+
+  font-size: 1rem;
+  text-align: center;
+}
+.tittle {
+ 
+  justify-items: center;
+  
+}
+
+.img_banner{
+  position:center;
+  max-width: 100%;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.text{
+  justify-content: center;
+  line-height: 2;
+}
+
+.promote_container{
+  
+  padding: 20px;
+  background-color: #ffbf6e;
+  margin: 1px 15px 1px 28px;
+  float: right;
+  width: 350px;
+  border-radius: 6px;
+}
+
+.promote{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+button{
+  
+  background-color: black;
+  color: white;
+  padding: 17px 20px 17px 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  align-items: center;
+ 
+}
+
+button:hover{
+  
+ background-color: #121313;
+ cursor: pointer;
+ box-shadow: 0px 0px 10px #000200;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.social_media{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social_media img{
+  width: 40px;
+  height: 50px;
+  padding: 10px;
+}
+
+
+.icon {
+  width: 50px;
+  height: 50px;
+  max-width: 50px;  
+  max-height: 50px; 
+  fill: #B0B0B0;
+  stroke: transparent; 
+  stroke-width: 2;
+}
+
+.fb:hover{
+  fill: #1877F2; 
+}
+.fb{
+
+padding: 13px;
+}
+.twitter:hover{
+  fill: #1DA1F2;
+}
+
+.twitter{
+padding: 14px;
+}
+.in:hover {
+  fill: #0A66C2; 
+}
+
+.in{
+  padding: 14px;
+}
+
+
