@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordered list</title>
+  </head>
+  <body>
+    <button id="add-item">Add ordered item</button>
+    <button id="remove-item">Remove all the items</button>
+    <ol id="ordered-list"></ol>
+
+    <script>
+      const addButton = document.getElementById("add-item");
+      const addItem = () => {
+        const item = document.createElement("li");
+        item.innerHTML = "Ordered item";
+        const list = document.getElementById("ordered-list");
+        list.appendChild(item);
+      };
+
+      addButton.addEventListener("click", addItem);
+
+      const removeButton = document.getElementById("remove-item");
+      const removeItem = () => {
+        const element = document.getElementById("ordered-list");
+        while (element.firstChild) {
+          element.removeChild(element.firstChild);
+        }
+      };
+      removeButton.addEventListener("click", removeItem);
+    </script>
+  </body>
+</html>
