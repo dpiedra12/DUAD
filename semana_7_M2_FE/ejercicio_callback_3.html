@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3 callback</title>
+    <style>
+      p {
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+        padding: 15px;
+        width: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Ejercicio 3 callback</h1>
+    <p id="color-p">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil placeat
+      distinctio, aperiam, officia quae obcaecati nobis accusamus, quisquam
+      mollitia modi pariatur. Vitae tempora sunt rem quidem suscipit eum,
+      molestiae libero?
+    </p>
+
+    <button id="color-btn">Click me</button>
+    <script>
+      const colorButton = document.getElementById("color-btn");
+
+      const changeColor = () => {
+        const myAarray = ["red", "blue", "green", "yellow", "cyan", "pink"];
+        const rand = Math.floor(Math.random() * myAarray.length);
+        const colorBg = myAarray[rand];
+        document.getElementById("color-p").style.backgroundColor = colorBg;
+      };
+
+      colorButton.addEventListener("click", changeColor);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio3 Async/Await</title>
+  </head>
+  <body>
+    <h1>Ejercicio 3 Async/Await</h1>
+
+    <div>
+      <label for="id-input">Ingrese un ID de usuario:</label> <br />
+      <br /><input onfocus="this.value=''" id="id-input" type="text" />
+      <button id="send-btn">Send</button>
+
+      <p style="color: red" id="error"></p>
+      <p id="name"></p>
+      <p id="lastname"></p>
+      <p id="email"></p>
+    </div>
+
+    <script>
+      const sendButton = document.getElementById("send-btn");
+
+      async function getUserById() {
+        let idUser = document.getElementById("id-input").value;
+        try {
+          if (idUser === "") {
+            throw new Error("Ingrese un ID de usuario.");
+          }
+
+          const response = await fetch(`https://reqres.in/api/users/${idUser}`);
+          document.querySelectorAll("p").forEach((p) => (p.textContent = ""));
+
+          if (!response.ok) {
+            throw new Error("El usuario no se encontró.");
+          }
+
+          const data = await response.json();
+
+          let inpuName = (document.getElementById(
+            "name"
+          ).innerHTML = `Nombre: ${data.data.first_name}`);
+          document.getElementById(
+            "lastname"
+          ).innerHTML = `Apellido: ${data.data.last_name}`;
+          document.getElementById(
+            "email"
+          ).innerHTML = `Email: ${data.data.email}`;
+        } catch (error) {
+          document.getElementById("error").innerHTML = error;
+        }
+      }
+
+      sendButton.addEventListener("click", getUserById);
+    </script>
+  </body>
+</html>
