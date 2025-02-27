@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/registro.js" defer></script>
+    <title>Sign Up</title>
+  </head>
+
+  <body>
+    <form>
+      <div class="custom-form">
+        <h1>Sign Up</h1>
+        <br /><br />
+        <label for="name-input">Name</label>
+        <input type="text" name="name" id="name-input" /><br /><br />
+
+        <label for="email-input">Email</label>
+        <input type="email" name="email" id="email-input" /><br /><br />
+
+        <label for="password-input">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password-input"
+        /><br /><br />
+
+        <label for="address-input">Address</label>
+        <input type="text" name="address" id="address-input" />
+
+        <input id="sign-btn" type="button" value="Sign Up" />
+        <p id="error"></p>
+      </div>
+    </form>
+  </body>
+</html>
