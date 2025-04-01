@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="./js/login.js" defer></script>
+
+    <title>Login</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <h1 class="app-name">DUAD To-Do List</h1>
+    </header>
+
+    <main class="main-container">
+      <form>
+        <div class="custom-form">
+          <h1>Sign in</h1>
+          <br /><br />
+          <label for="userID">User ID</label>
+          <input
+            type="text"
+            name="userID"
+            class="generic-input"
+            id="userID-input"
+          /><br /><br />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            class="generic-input"
+            id="password-input"
+          /><br /><br />
+
+          <input id="sign-btn" class="sign-btn" type="button" value="Sign in" />
+
+            <a href="./password-reset.html">Forgot password?</a>
+          </p>
+          <p>
+            <a href="./sign-up.html">Don't have an account?</a>
+          </p>
+
+
+          <p id="error"></p>
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2025 To-Do List App</p>
+      <p class="about">
+        <a href="./about.html">About</a>
+      </p>
+    </footer>
+  </body>
+</html>

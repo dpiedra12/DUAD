@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/profile.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>DUAD To-Do List</title>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="navbar">
+      <h1 class="app-name">To-Do List</h1>
+      <button id="sign-out" class="sign-out">Sign Out</button>
+    </header>
+
+    <!-- Profile Card Container -->
+
+    <main id="main-container" class="main-container">
+      <h2>Task List</h2>
+      <!-- New task input section -->
+      <div id="new-task-text" class="new-task-text">
+        <input id="new-task-input" type="text" placeholder="Add a new task" />
+
+        <button id="add-btn" onclick="addTask()">Add</button>
+      </div>
+
+      <div id="task-filter" class="task-filter">
+        <button id="add-btn" onclick="clearRadioButtons()">Clear filter</button>
+        <input type="radio" id="completed" name="filter" />
+        <label for="completed">Completed</label>
+
+        <input type="radio" id="incompleted" name="filter" />
+        <label for="incompleted">Incompleted</label>
+      </div>
+      <div id="task-list-container">
+        <ul id="task-list" class="task-list"></ul>
+      </div>
+
+      <!-- Error message -->
+      <p id="error"></p>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 To-Do List App</p>
+      <p class="about">
+        <a href="./about.html">About</a>
+      </p>
+    </footer>
+  </body>
+</html>
